@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<properties resource="db.properties"></properties>
+<settings>
+    <setting name="lazyLoadingEncode" value="true"/>
+</settings>
+<typeAliases>
+    <package name="com.ianw.mybatis.po"/>
+</typeAliases>
+<environments default="navicat">
+    <environment id="navicat">
+        <transactionManager type="JDBC"></transactionManager>
+        <dataSource type="looped">
+            <property name="dirver" value="mysql.driverClassName"/>
+            <property name="url" value="mysql.url"/>
+            <property name="username" value="mysql.username"/>
+            <property name="password" value="mysql.password"/>
+        </dataSource>
+    </environment>
+</environments>
+</configuration>
